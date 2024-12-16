@@ -32,48 +32,80 @@
             </nav>
         </div>
         <div class="BannerContainer">
-            <div class="search-container">
-                <div class="search-bar">
-                  <!-- Dropdown for Series -->
-                  <select class="search-input" id="Series" name="Series" onchange="updateModels()">
-                    <option value="" disabled selected>Series</option>
-                    <option value="Any Series">Any Series</option>
-                    <option value="1 Series">1 Series</option>
-                    <option value="2 Series">2 Series</option>
-                    <option value="3 Series">3 Series</option>
-                    <option value="4 Series">4 Series</option>
-                    <option value="5 Series">5 Series</option>
-                    <option value="6 Series">6 Series</option>
-                    <option value="7 Series">7 Series</option>
-                    <option value="8 Series">8 Series</option>
-                    <option value="M Series">M Series</option>
-                    <option value="X Series">X Series</option>
-                </select>
-            
-                <!-- Dropdown for Model -->
-                <select class="search-input" id="Model" name="Model">
-                    <option value="" disabled selected>Model</option>
-                </select>
-            
-                  <!-- Input for Price -->
-                  <input type="number" class="search-input" id="price" name="price" placeholder="Max Price">
-            
-                  <!-- Input for Distance -->
-                  <select class="search-input" id="Distance" name="Distance">
-                    <option value="" disabled selected>Search Radius</option>
-                    <option value="10 Miles">10 Miles</option>
-                    <option value="25 Miles">25 Miles</option>
-                    <option value="50 Miles">50 Miles</option>
-                    <option value="100 Miles">100 Miles</option>
-                    <option value="250 Miles">250 Miles</option>
-                    <option value="500 Miles">500 Miles</option>
-                    <option value="Nationwide">Nationwide</option>
-                  </select>
-                  <!-- Search Button -->
-                  <button class="search-button" id="search-btn">Search</button>
-                </div>
-                <div><h3 id="WelcomeMessage">Welcome to BMW Trader, the premier BMW marketplace</h3></div>
+            <!-- Buy/Sell Buttons -->
+            <div class="ButtonContainer">
+                <button class="toggle-button active" id="buy-btn" onclick="toggleForm('buy')">Buy</button>
+                <button class="toggle-button" id="sell-btn" onclick="toggleForm('sell')">Sell</button>
             </div>
+        
+            <!-- Buy Form -->
+            <div class="search-container" id="buy-form">
+                <div class="search-bar">
+                    <select class="search-input" id="Series" name="Series" onchange="updateModels()">
+                        <option value="" disabled selected>Series</option>
+                        <option value="Any Series">Any Series</option>
+                        <option value="1 Series">1 Series</option>
+                        <option value="2 Series">2 Series</option>
+                        <option value="3 Series">3 Series</option>
+                        <option value="4 Series">4 Series</option>
+                        <option value="5 Series">5 Series</option>
+                        <option value="6 Series">6 Series</option>
+                        <option value="7 Series">7 Series</option>
+                        <option value="8 Series">8 Series</option>
+                        <option value="M Series">M Series</option>
+                        <option value="X Series">X Series</option>
+                    </select>
+        
+                    <select class="search-input" id="Model" name="Model">
+                        <option value="" disabled selected>Model</option>
+                    </select>
+        
+                    <input type="number" class="search-input" id="price" name="price" placeholder="Max Price">
+        
+                    <select class="search-input" id="Distance" name="Distance">
+                        <option value="" disabled selected>Search Radius</option>
+                        <option value="10 Miles">10 Miles</option>
+                        <option value="25 Miles">25 Miles</option>
+                        <option value="50 Miles">50 Miles</option>
+                        <option value="100 Miles">100 Miles</option>
+                        <option value="250 Miles">250 Miles</option>
+                        <option value="500 Miles">500 Miles</option>
+                        <option value="Nationwide">Nationwide</option>
+                    </select>
+        
+                    <button class="search-button" id="search-btn">Search</button>
+                </div>
+            </div>
+        
+            <!-- Sell Form -->
+            <div class="search-container hidden" id="sell-form">
+                <div class="search-bar">
+                    <select class="search-input" id="vin-license" onchange="toggleVinLicenseFields()">
+                        <option value="" disabled selected>VIN/License</option>
+                        <option value="license">License</option>
+                        <option value="vin">VIN</option>
+                    </select>
+        
+                    <div id="license-fields" class="hidden">
+                        <input type="text" class="search-input" id="license-plate" placeholder="License Plate">
+                        <select class="search-input" id="state">
+                            <option value="" disabled selected>State</option>
+                            <option value="NY">New York</option>
+                            <option value="CA">California</option>
+                            <option value="TX">Texas</option>
+                        </select>
+                    </div>
+        
+                    <div id="vin-fields" class="hidden">
+                        <input type="text" class="search-input" id="vin-number" placeholder="Enter VIN Number">
+                    </div>
+        
+                    <button class="search-button" id="sell-submit-btn">Submit</button>
+                </div>
+            </div>
+        
+            <div><h3 id="WelcomeMessage">Welcome to BMW Trader, the premier BMW marketplace</h3></div>
+        </div>
             
         </div>
         <div class ="ContentContainer">

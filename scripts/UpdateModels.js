@@ -1,33 +1,55 @@
-// Object mapping BMW Series to their respective Models
-const bmwSeriesToModels = {
-    "1 Series": ["Any Model", "116i", "118i", "120i", "128ti", "M135i"],
-    "2 Series": ["Any Model", "218i", "220i", "230i", "M240i", "M2"],
-    "3 Series": ["Any Model", "318i", "320i", "330i", "340i", "M340i", "M3"],
-    "4 Series": ["Any Model", "420i", "430i", "440i", "M440i", "M4"],
-    "5 Series": ["Any Model", "520i", "530i", "540i", "M550i", "M5"],
-    "6 Series": ["Any Model", "630i", "640i", "650i", "M6"],
-    "7 Series": ["Any Model", "730i", "740i", "750i", "760Li"],
-    "8 Series": ["Any Model", "840i", "850i", "M850i", "M8"],
-    "M Series": ["Any Model", "M135", "M2", "M3", "M4", "M5","M6", "M8"],
-    "X Series": ["Any Model", "X1", "X2", "X3", "X4", "X5", "X6", "X7", "XM"],
-};
+// Function to toggle between Buy and Sell forms
+function toggleForm(formType) {
+    const buyForm = document.getElementById("buy-form");
+    const sellForm = document.getElementById("sell-form");
+    const buyButton = document.getElementById("buy-btn");
+    const sellButton = document.getElementById("sell-btn");
 
-// Function to update the "Model" dropdown
+    if (formType === "buy") {
+        buyForm.classList.remove("hidden");
+        sellForm.classList.add("hidden");
+        buyButton.classList.add("active");
+        sellButton.classList.remove("active");
+    } else {
+        sellForm.classList.remove("hidden");
+        buyForm.classList.add("hidden");
+        sellButton.classList.add("active");
+        buyButton.classList.remove("active");
+    }
+}
+
+// Function to toggle VIN/License fields
+function toggleVinLicenseFields() {
+    const vinLicenseDropdown = document.getElementById("vin-license");
+    const licenseFields = document.getElementById("license-fields");
+    const vinFields = document.getElementById("vin-fields");
+
+    if (vinLicenseDropdown.value === "license") {
+        licenseFields.classList.remove("hidden");
+        vinFields.classList.add("hidden");
+    } else if (vinLicenseDropdown.value === "vin") {
+        vinFields.classList.remove("hidden");
+        licenseFields.classList.add("hidden");
+    }
+}
+
+// Existing function to update Model dropdown based on Series
 function updateModels() {
     const seriesDropdown = document.getElementById("Series");
     const modelDropdown = document.getElementById("Model");
 
-    // Get the selected series
-    const selectedSeries = seriesDropdown.value;
+    const bmwSeriesToModels = {
+        "1 Series": ["Any Model", "116i", "118i", "120i", "128ti", "M135i"],
+        "2 Series": ["Any Model", "218i", "220i", "230i", "M240i", "M2"],
+        "3 Series": ["Any Model", "318i", "320i", "330i", "340i", "M340i", "M3"],
+        "X Series": ["Any Model", "X1", "X2", "X3", "X4", "X5", "X6", "X7", "XM"]
+    };
 
-    // Clear existing options in the Model dropdown
     modelDropdown.innerHTML = '<option value="" disabled selected>Model</option>';
-
-    // Populate the Model dropdown with relevant models
-    if (bmwSeriesToModels[selectedSeries]) {
-        bmwSeriesToModels[selectedSeries].forEach(model => {
+    if (bmwSeriesToModels[seriesDropdown.value]) {
+        bmwSeriesToModels[seriesDropdown.value].forEach(model => {
             const option = document.createElement("option");
-            option.value = model.toLowerCase();
+            option.value = model;
             option.textContent = model;
             modelDropdown.appendChild(option);
         });
