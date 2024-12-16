@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Nav-Bar.css">
+    <link rel="stylesheet" href="Index.css">
+    <title>BMW Trader</title>
+</head>
+<body>
+    
+    <div class="PageContainer">
+        <div class="NavBarContainer">
+            <nav class="navbar solid" id="navbar">
+                <div class="nav-left">
+                    <a class="Logo" href="Index.html" target="_self" title="Home">
+                        <h3>BMW Trader</h3>
+                    </a>
+                    <a class="AmericanFlag" href="/AboutUs Pages/AboutUs-Home.html" target="_self" title="About LifeWork USA - A Company Built on Freedom">
+                        <img src="Images/AmericanFlag.png" alt="American Flag" class="AmericanFlagImage">
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="Buy a BMW" target="_blank">Buy a BMW</a>
+                    <a href="SellaBMW.html">Sell a BMW</a>
+                    <a href="BMWBuyersGuide.html">BMW Buyers Guide</a>
+                </div>
+                <div class="nav-buttons">
+                    <a href="Signin.html" class="login-button">Login</a>
+                    <a href="Singup.html" class="get-started-button">Get Started</a>
+                </div>
+            </nav>
+        </div>
+        <div class="BannerContainer">
+            <div class="search-container">
+                <div class="search-bar">
+                  <!-- Dropdown for Series -->
+                  <select class="search-input" id="Series" name="Series" onchange="updateModels()">
+                    <option value="" disabled selected>Series</option>
+                    <option value="Any Series">Any Series</option>
+                    <option value="1 Series">1 Series</option>
+                    <option value="2 Series">2 Series</option>
+                    <option value="3 Series">3 Series</option>
+                    <option value="4 Series">4 Series</option>
+                    <option value="5 Series">5 Series</option>
+                    <option value="6 Series">6 Series</option>
+                    <option value="7 Series">7 Series</option>
+                    <option value="8 Series">8 Series</option>
+                    <option value="M Series">M Series</option>
+                    <option value="X Series">X Series</option>
+                </select>
+            
+                <!-- Dropdown for Model -->
+                <select class="search-input" id="Model" name="Model">
+                    <option value="" disabled selected>Model</option>
+                </select>
+            
+                  <!-- Input for Price -->
+                  <input type="number" class="search-input" id="price" name="price" placeholder="Max Price">
+            
+                  <!-- Input for Distance -->
+                  <select class="search-input" id="Distance" name="Distance">
+                    <option value="" disabled selected>Search Radius</option>
+                    <option value="10 Miles">10 Miles</option>
+                    <option value="25 Miles">25 Miles</option>
+                    <option value="50 Miles">50 Miles</option>
+                    <option value="100 Miles">100 Miles</option>
+                    <option value="250 Miles">250 Miles</option>
+                    <option value="500 Miles">500 Miles</option>
+                    <option value="Nationwide">Nationwide</option>
+                  </select>
+                  <!-- Search Button -->
+                  <button class="search-button" id="search-btn">Search</button>
+                </div>
+                <div><h3 id="WelcomeMessage">Welcome to BMW Trader, the premier BMW marketplace</h3></div>
+            </div>
+            
+        </div>
+        <div class ="ContentContainer">
+            <h3>Welcome to the Buyers Guide</h3>
+        </div>
+    </div>
+    <script src="scripts/UpdateModels.js"></script>
+</body>
+</html>
