@@ -1,0 +1,422 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Page Setup */
+body, html {
+    font-family: 'Arial', 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.PageContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+/* Article Container */
+.article-container {
+    margin-top: 70px;
+}
+
+/* Article Header Section */
+.article-header {
+    display: flex;
+    align-items: center; /* Vertically align button and title */
+    justify-content: space-between; /* Space between button and centered content */
+    padding: 1.5rem 2rem; /* Adjust padding */
+    background-color: #007bff;
+    color: #ffffff;
+    position: relative;
+}
+
+.article-header .header-left {
+    flex: 0 0 auto; /* Prevent button from stretching */
+}
+
+.article-header .header-right {
+    flex: 1; /* Allow space for centering */
+    text-align: center; /* Center align the title and subtitle */
+}
+
+.article-header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.article-header .article-subtitle {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 0.5rem 0 0;
+}
+
+.return-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #0056b3;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.return-button:hover {
+    background-color: #003f7f;
+    transform: scale(1.05);
+}
+
+.return-button:active {
+    background-color: #002f5e;
+    transform: scale(1);
+}
+
+@media (max-width: 768px) {
+    .article-header {
+        flex-direction: column;
+        align-items: center; /* Center align all items vertically */
+        text-align: center; /* Center the text */
+    }
+
+    .article-header .header-left {
+        margin-bottom: 1rem; /* Add spacing below the button */
+    }
+
+    .article-header .header-right {
+        text-align: center; /* Ensure title and subtitle stay centered */
+    }
+}
+/* Thumbnail Section */
+.thumbnail-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    background-color: #e9ecef;
+}
+
+.thumbnail-image {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.thumbnail-description {
+    font-size: 1rem;
+    text-align: center;
+    max-width: 800px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Section Styles */
+section {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Introduction Section */
+.introduction h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.introduction p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Models Section */
+.ModelsSubsection {
+    display: flex;
+    flex-direction: column;
+}
+
+.ModelsSubsection h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.Models {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next row */
+    justify-content: space-between; /* Space evenly between cards */
+    gap: 1.2rem; /* Add space between cards */
+}
+
+.model-card {
+    flex: 1 1 calc(25.0% - 1.2rem); /* Each card takes 33% width minus the gap */
+    max-width: 30rem; /* Prevent cards from getting too wide */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 0; /* Remove margins for consistency */
+    background-color: #ffffff;
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.model-card img.CardImg {
+    width: 100%; /* Ensure image spans the full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px 8px 0 0; /* Rounded corners only on the top */
+}
+
+.model-card p {
+    font-size: 1rem;
+    line-height: 1.2; /* Adjust the spacing between lines */
+    color: #555;
+    margin-bottom: 20px; /* Add spacing below each paragraph */
+}
+
+.model-card ul li {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 5px; /* Add spacing between list items */
+}
+
+.model-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px; /* Slightly larger gap below the title */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1024px) {
+    .model-card {
+        flex: 1 1 calc(50% - 1.5rem); /* 2 cards per row */
+        margin: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .model-card {
+        flex: 1 1 calc(100% - 1.5rem); /* 1 card per row */
+        margin: auto;
+    }
+}
+
+/* Performance Table */
+.performance {
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 1200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.performance h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Table Wrapper for Horizontal Scroll */
+.table-wrapper {
+    overflow-x: auto; /* Enable horizontal scroll */
+    margin: 0 auto; /* Center the table wrapper */
+    max-width: 100%; /* Full width of the container */
+    border: 1px solid #ddd; /* Light border around the wrapper */
+    border-radius: 8px; /* Rounded corners for wrapper */
+}
+
+/* Table Styling */
+.performance-table {
+    width: 100%; /* Full width of the wrapper */
+    border-collapse: collapse;
+    background-color: #ffffff;
+    white-space: nowrap; /* Prevent text wrapping in table cells */
+}
+
+.performance-table th,
+.performance-table td {
+    text-align: center;
+    padding: 0.75rem 1.5rem; /* Adjust padding for better spacing */
+    border: 1px solid #ddd;
+}
+
+.performance-table th {
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.performance-table td {
+    font-size: 1rem;
+    color: #444;
+    font-weight: normal;
+    transition: background-color 0.2s ease;
+}
+
+.performance-table tr:nth-child(even) {
+    background-color: #f4f4f4; /* Alternate row color for readability */
+}
+
+.performance-table tr:hover {
+    background-color: #e9ecef; /* Highlight row on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .performance-table th,
+    .performance-table td {
+        font-size: 0.9rem; /* Slightly smaller text for small screens */
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .performance-table th,
+    .performance-table td {
+        font-size: 0.8rem; /* Further reduce text size for very small screens */
+        padding: 0.5rem;
+    }
+}
+
+/* Body Styles Section */
+.body-stylesSubsection {
+    display: flex;
+    flex-direction: column;
+}
+
+.body-stylesSubsection h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.body-styles {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between;
+    gap: 1.5rem; /* Space between cards */
+    padding: 2rem; /* Padding around the section */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px;
+    margin: auto;
+}
+
+.style-option {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Prevent overflow from images or content */
+    padding: 0; /* Remove padding to make image flush with card edges */
+    margin-bottom: 1.5rem;
+    background-color: #ffffff;
+    width: 20rem; /* Fixed width for cards */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align text and images */
+    text-align: center;
+}
+
+.CardImg {
+    width: 100%; /* Image spans the full width of the card */
+    height: 250px; /* Fixed height for uniformity */
+    object-fit: contain; /* Ensure the image covers the area */
+    margin: 0;
+}
+
+.style-option h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 1rem 0 0.5rem; /* Add spacing above and below the title */
+}
+
+.style-option p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Interior Section */
+.interior h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.interior p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Footer Section */
+.article-footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.article-footer h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.article-footer p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .body-styles {
+        justify-content: center; /* Center cards on smaller screens */
+        padding: 1rem;
+    }
+
+    .style-option {
+        width: 100%; /* Full-width cards on smaller screens */
+    }
+
+    .article-header h1 {
+        font-size: 2rem;
+    }
+
+    .thumbnail-description {
+        font-size: 0.9rem;
+    }
+
+    .performance-table th,
+    .performance-table td {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .thumbnail-description {
+        font-size: 0.8rem;
+    }
+
+    .performance-table th,
+    .performance-table td {
+        font-size: 0.8rem;
+    }
+}

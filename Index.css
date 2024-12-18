@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    
 }
 
 h1, h2 {
@@ -10,7 +11,7 @@ h1, h2 {
 }
 
 h3 {
-    font-size: 27px;
+    font-size: 45px;
     margin: 0;
     font-weight: bold;
 }
@@ -28,7 +29,8 @@ body, html {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    background-color: green;
+    background-color: rgb(210, 231, 20);
+    width: 100%;
 }
 
 .PageContainer {
@@ -38,10 +40,11 @@ body, html {
     margin-top: 70px;
     display: flex;
     flex-direction: column;
+
 }
 
 .BannerContainer {
-        background-image: url(/Pictures/HomePageImage.png);
+        background-image: url(Assets/Pictures/HomePageImage.png);
         background-size: cover;
         background-position: center;
         z-index: 5;
@@ -56,29 +59,46 @@ body, html {
 .ButtonContainer {
     display: flex; /* Center the buttons horizontally */
     justify-content: center; /* Align the buttons to the center */
-    margin-top: -350px; /* Move buttons closer to the search bar */
+    margin-top: 40px; /* Move buttons closer to the search bar */
     position: relative;
-    z-index: 10;
+    z-index: 11;
+    background-color: rgb(253, 252, 252);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Add a light outline */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+    padding: 5px; /* Add slight padding for spacing */
     
 }
 
-.BannerContainer #WelcomeMessage {
-    color: white;
+#WelcomeMessage {
+    color: rgb(254, 253, 253);
     text-align: center;
-    margin-top: 10px;
+    position: relative;
+    margin-top: -300px;
+
 }
 
 .ContentContainer {
     
     width: 100%;
-    height: 500px;
+    height: auto;
     background-color: brown;
     align-content: center;
     text-align: center;
+    padding: 0 0 0 0px;
+    box-sizing: border-box;
+}
+
+.ContentContainer h2 {
+    color: white;
+    margin-top: 75px;
+    text-decoration: underline;
+    
 }
 
 .ContentContainer h3 {
     color: white;
+    margin-top: 75px;
     
 }
 
@@ -89,7 +109,7 @@ body, html {
         align-items: center;
         flex-direction: column;
         z-index: 5;
-        margin-top: 10px;
+        margin-top: -8px; /* to adjust the space for buy/sell buttons to the actual search bar */
   }
   
   .search-bar {
@@ -97,9 +117,11 @@ body, html {
     display: flex;
     align-items: center;
     gap: 10px; /* Spacing between inputs */
-    padding: 15px 20px;
+    padding: 15px 30px;
     border-radius: 30px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
   }
   
   /* Input Fields */
@@ -156,4 +178,218 @@ body, html {
 
 .toggle-button:hover {
     background-color: #0056b3;
+}
+
+.CardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 16rem);
+    gap: 2rem;
+    margin-top: 75px;
+    max-width: 100%;
+    width: calc(100% - 2rem); /* To account for padding */
+    padding: 0 1rem; /* Optional padding */
+    justify-content: center;
+    
+    
+    
+}
+
+.card {
+    width: 16rem;
+    border: 2px solid #020000;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.card-img-top {
+    height: 200px;
+    width: 16rem;
+    object-fit:contain;
+    background-color: black;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 16rem;
+    height: 200px; /* Adjust this value as needed */
+    padding: 1rem;
+    background-color: #ddd;
+    box-sizing: border-box;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: navy;
+    text-align: center;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: navy;
+    text-align: center;
+}
+
+.btn {
+    background-color: navy;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: .375rem;
+    margin-top: auto; /* Push the button to the bottom */
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+.ViewAllButtonContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.ViewAllBTN {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0056b3;
+    height: 55px;
+    padding: 0;
+    border-radius: 10px;
+    width: 300px;
+    padding: 10px;
+}
+
+.ViewAllBTN h3 {
+   margin: 0;
+   font-size: 23px;
+   text-decoration: underline 5px rgb(160, 7, 7);
+}
+
+/* Responsive Design */
+@media (max-width: 601px) {
+    .CardsContainer {
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 16rem));
+    }
+}
+
+@media (max-width: 600px) {
+    .CardsContainer {
+        grid-template-columns: 16rem;
+    }
+}
+
+.ContentDivider {
+    width: 100%;
+    background-color: #020000;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 10px;
+}
+#BuyersGuide {
+    
+    width: 100%;
+    height: auto;
+    background-color: rgb(42, 44, 165);
+    align-content: center;
+    text-align: center;
+    padding-bottom: 200px;
+}
+
+#Reviews-BuyersGuideTitle {
+    margin-bottom: 75px;
+}
+
+.CardsContainerArticle {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        width: 100%;
+        margin-top: 100px;
+        margin: 0 auto;
+        padding: 1rem 0;
+        box-sizing: border-box;
+        justify-content: center;
+        background-color: #007bff;     
+}
+
+@media (min-width: 768px) {
+    .CardsContainerArticle {
+        grid-template-columns: 1fr; /* Still single column for tablets */
+    }
+}
+
+@media (min-width: 1024px) {
+    .CardsContainerArticle {
+        grid-template-columns: 1fr; /* Three columns for larger screens */
+    }
+}
+
+/* Individual Article Cards */
+
+.cardArticle {
+    width: 70%;
+    border: 2px solid #020000;
+    display: flex;
+    flex-direction: row;
+    margin: auto;  
+    
+}
+
+.card-img-topArticle {
+    height: 300px;
+    width: 40%;
+    object-fit:cover;
+    background-color: black;
+}
+
+.card-bodyArticle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    width: 60%;
+    height: 300px; /* Adjust this value as needed */
+    padding: 1rem;
+    background-color: #ddd;
+    box-sizing: border-box;
+}
+
+.card-titleArticle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: navy;
+    text-align: left;
+}
+
+.card-textArticle {
+    font-size: 1rem;
+    color: rgb(0, 0, 12);
+    text-align: left;
+    margin: 0 0 10px 0px;
+}
+
+.btn-primaryArticle {
+    background-color: navy;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: .375rem;
+    margin-top: auto; /* Push the button to the bottom */
+    margin-bottom: 1rem;
+    text-decoration: none;
+    width: 25%;
+    align-self: center;
 }
