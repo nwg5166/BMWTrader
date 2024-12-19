@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Nav-Bar.css">
+    <link rel="stylesheet" href="ListTemplate.css">
+    <title>Listing Title</title>
+</head>
+<body>
+    <div class="PageContainer">
+        <!-- Navigation Bar -->
+        <div class="NavBarContainer">
+            <nav class="navbar solid" id="navbar">
+                <div class="nav-left">
+                    <a class="Logo" href="/Index.html" target="_self" title="Home">
+                        <h3>BMW Trader</h3>
+                    </a>
+                    <a class="AmericanFlag" href="/AboutUs Pages/AboutUs-Home.html" target="_self" title="BMWTrader.com">
+                        <img src="/Assets/Pictures/AmericanFlag.png" alt="American Flag" class="AmericanFlagImage">
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="/BuyaBMW/BuyaBMW.html">Buy a BMW</a>
+                    <a href="/SellaBMW/SellaBMW.html">Sell a BMW</a>
+                    <a href="/BuyersGuide/BuyersGuide.html">BMW Buyers Guide</a>
+                    <a href="/Article/BMWReview.html">BMW Reviews</a>
+                </div>
+                <div class="nav-buttons">
+                    <a href="Signin.html" class="login-button">Login</a>
+                    <a href="Singup.html" class="get-started-button">Get Started</a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Listing Header Section -->
+        <div class="ListingHeader">
+            <h1>2022 BMW M3 Competition</h1>
+            <div class="breadcrumbs">
+                <a href="/Index.html">Home</a> > <a href="/BuyaBMW/BuyaBMW.html">Search</a> > <a href="#">M3</a> > 2022 BMW M3 Competition
+            </div>
+        </div>
+
+        <!-- Listing Content -->
+        <div class="ContentContainer">
+            <!-- Main Listing Details -->
+            <div class="ListingDetails">
+                <div class="ImageContainer">
+                    <img src="/Assets/Pictures/BMWCar2.png" alt="2022 BMW M3 Competition" class="ListingImage">
+                </div>
+                <div class="DetailsContainer">
+                    <h2>$75,000</h2>
+                    <p>Condition: <strong>Used</strong></p>
+                    <p>Model: <strong>M3 Competition</strong></p>
+                    <p>Color: <strong>Alpine White</strong></p>
+                    <p>Transmission: <strong>Automatic</strong></p>
+                    <p>Year: <strong>2022</strong></p>
+                    <p>Fuel Type: <strong>Gasoline</strong></p>
+                    <button class="ContactButton">Contact Seller</button>
+                </div>
+            </div>
+
+            <!-- Description Section -->
+            <div class="DescriptionSection">
+                <h2>Description</h2>
+                <p>
+                    This 2022 BMW M3 Competition is a rare find with only 10,000 miles. It features a stunning Alpine White exterior with a luxurious black leather interior. Equipped with advanced technology, this car offers unmatched performance and style. A must-see for enthusiasts!
+                </p>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="ContactSection">
+                <h2>Send a Message</h2>
+                <form>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="phone" placeholder="Your Phone" required>
+                    <textarea name="message" placeholder="Message to Seller" required></textarea>
+                    <button type="submit" class="SendButton">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

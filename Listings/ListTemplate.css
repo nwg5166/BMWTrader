@@ -1,0 +1,226 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Page Setup */
+body, html {
+    font-family: 'Arial', 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.PageContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+/* Layout for Listing Page */
+.ListingContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 175px 0 40px auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Image Carousel (70% Width) */
+.ImageCarousel {
+    flex: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Main Image */
+.MainImage img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Thumbnail Carousel */
+.ThumbnailCarousel {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.ThumbnailCarousel img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Section (30% Width) */
+.Sidebar {
+    flex: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Listing Information */
+.ListingInformation {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.ListingInformation h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.ListingInformation .breadcrumbs {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.ListingInformation .breadcrumbs a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.ListingInformation .breadcrumbs a:hover {
+    color: #0056b3;
+}
+
+.ListingInformation .Price h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.ListingInformation .ContactButton button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ListingInformation .ContactButton button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Features Section */
+.FeaturesSection {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.FeaturesSection h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.FeaturesSection ul {
+    list-style: none;
+    padding: 0;
+}
+
+.FeaturesSection li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.FeaturesSection strong {
+    color: #000;
+}
+
+/*Listing Content*/
+/*Description section*/
+.ListingContentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(255, 255, 255);
+    height: 225px;
+}
+.DescriptionSection {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: 150px;
+    width: 80%;
+    margin: 0 auto;
+}
+.DescriptionSection h2 {
+    font-size: 1.5rem;
+    color: #3217c9;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.DescriptionSection p {
+    font-size: 1rem;
+    color: #000000;
+}
+/*Seller Info section*/
+
+.ListingContentContainer2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+}
+
+.SellerInfoSection {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: 150px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.SellerInfoSection h2 {
+    font-size: 1.5rem;
+    color: #3217c9;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.SellerInfoSection p {
+    font-size: 1rem;
+    color: #000000;
+}
+

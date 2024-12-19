@@ -31,7 +31,322 @@
                 </div>
             </nav>
         </div>
+        <div class="SearchBarContainer">
+            <div class="advanced-search-container">
+                <!-- Filters -->
+                <div class="search-filters">
+                    <select id="newUsed" class="search-input">
+                        <option value="" disabled selected>New/Used</option>
+                        <option value="new">New</option>
+                        <option value="used">Used</option>
+                    </select>
+                    <select id="series" class="search-input">
+                        <option value="" disabled selected>Series</option>
+                        <option value="1-series">1 Series</option>
+                        <option value="3-series">3 Series</option>
+                        <option value="5-series">5 Series</option>
+                    </select>
+                    <select id="model" class="search-input" multiple>
+                        <option value="320i">320i</option>
+                        <option value="330i">330i</option>
+                        <option value="M3">M3</option>
+                    </select>
+                    <select id="trim" class="search-input" multiple>
+                        <option value="base">Base</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                    <select id="style" class="search-input" multiple>
+                        <option value="sedan">Sedan</option>
+                        <option value="coupe">Coupe</option>
+                        <option value="convertible">Convertible</option>
+                    </select>
+                </div>
+        
+                <!-- Additional Filters -->
+                <div class="additional-filters">
+                    <select id="exteriorColor" class="search-input" multiple>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="blue">Blue</option>
+                        <option value="red">Red</option>
+                    </select>
+                    <select id="interiorColor" class="search-input" multiple>
+                        <option value="black">Black</option>
+                        <option value="tan">Tan</option>
+                        <option value="gray">Gray</option>
+                    </select>
+                    <select id="transmission" class="search-input" multiple>
+                        <option value="automatic">Automatic</option>
+                        <option value="manual">Manual</option>
+                    </select>
+                    <select id="engine" class="search-input" multiple>
+                        <option value="v4">4-Cylinder</option>
+                        <option value="v6">6-Cylinder</option>
+                        <option value="v8">8-Cylinder</option>
+                    </select>
+                </div>
+        
+                <!-- Sliders -->
+                <div class="sliders">
+                    <div class="slider-container">
+                        <label for="mileage">Mileage:</label>
+                        <input type="range" id="mileage" name="mileage" min="0" max="200000" step="1000">
+                        <span id="mileage-value">0 - 200,000</span>
+                    </div>
+                    <div class="slider-container">
+                        <label for="price">Price:</label>
+                        <input type="range" id="price" name="price" min="0" max="200000" step="1000">
+                        <span id="price-value">$0 - $200,000</span>
+                    </div>
+                </div>
+        
+                <!-- Year Inputs -->
+                <div class="year-container">
+                    <label for="yearMin">Year Min:</label>
+                    <input type="number" id="yearMin" name="yearMin" min="1960" max="2025">
+                    <label for="yearMax">Year Max:</label>
+                    <input type="number" id="yearMax" name="yearMax" min="1960" max="2025" step="1">
+                </div>
+        
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+        <div class="FilterSection">
+            <div class="ResultsBanner">
+                <h2 id="ResultsCount">395 Results</h2>
+                <button class="SortButton">Sort</button>
+            </div>
+        </div>
+        <div class ="ContentContainer" id="FeaturedListingsCardGrid">
+            <h1>Our Featured Listings</h1>
+            <div class="CardsContainer">
+                <!--Start of Card 1-->
+                <div class="card">
+                    <img src="Assets/Pictures/BMWCar1.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">2018 BMW 335i xDrive </h5>
+                      <p class="card-text">Mileage:</p>
+                      <p class="card-text">Price:</p>
+                      <a href="./public/MondrianPainting.html" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+                <!--Start of Card 2-->
+                <div class="card">
+                    <img src="Assets/Pictures/BMWCar2.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">2022 BMW M3 Competition xDrive AWD</h5>
+                      <p class="card-text">Mileage:</p>
+                      <p class="card-text">Price:</p>
+                      <a href="./public/CreativeAgency.html" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+                <!--Start of Card 3-->
+                <div class="card">
+                    <img src="Assets/Pictures/BMWCar3.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">BMW 328i xDrive</h5>
+                      <p class="card-text">Mileage:</p>
+                      <p class="card-text">Price:</p>
+                      <a href="./public/MemeProject.html" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+                <!--Start of Card 4-->
+                <div class="card">
+                    <img src="Assets/Pictures/BMWTruck1.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">2017 BMW X5 M xDrive</h5>
+                      <p class="card-text">Mileage:</p>
+                      <p class="card-text">Price:</p>
+                      <a href="./public/birthday-invite.html" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+                <!--Start of Card 5-->
+                <div class="card">
+                    <img src="Assets/Pictures/BMWTruck2.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">2022 BMW X7 xDrive40i </h5>
+                      <p class="card-text">Mileage:</p>
+                      <p class="card-text">Price:</p>
+                      <a href="./public/SpanishVocab.html" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+                <!--Start of Card 6-->
+                <div class="card">
+                    <img src="Assets/Pictures/BMWCar4.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">2018 BMW 335i xDrive </h5>
+                      <p class="card-text">Mileage:</p>
+                      <p class="card-text">Price:</p>
+                      <a href="./public/MondrianPainting.html" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+                <!--Start of Card 7-->
+                <div class="card">
+                    <img src="Assets/Pictures/BMWCar5.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">2022 BMW M3 Competition xDrive AWD</h5>
+                      <p class="card-text">Mileage:</p>
+                      <p class="card-text">Price:</p>
+                      <a href="./public/CreativeAgency.html" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+                <!--Start of Card 8-->
+                <div class="card">
+                    <img src="Assets/Pictures/BMWCar6.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">BMW 328i X-Drive</h5>
+                      <p class="card-text">Mileage:</p>
+                      <p class="card-text">Price:</p>
+                      <a href="./public/MemeProject.html" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+                <!--Start of Card 9-->
+                <div class="card">
+                    <img src="Assets/Pictures/BMWCar7.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">2017 BMW X5 M xDrive</h5>
+                      <p class="card-text">Mileage:</p>
+                      <p class="card-text">Price:</p>
+                      <a href="./public/birthday-invite.html" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+                <!--Start of Card 10-->
+                <div class="card">
+                    <img src="Assets/Pictures/BMWTruck3.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">2022 BMW X7 xDrive40i </h5>
+                      <p class="card-text">Mileage:</p>
+                      <p class="card-text">Price:</p>
+                      <a href="./public/SpanishVocab.html" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+            </div>
+                <div class="ViewAllButtonContainer">
+                    <div class="ViewAllBTN">
+                        <a href="FeaturedListings.html"><h3>View All Featured Listings</h3></a>
+                    </div>
+                </div>
     </div>
-    
+        <div class="ContentDivider"></div>
+        <div class="ContentContainer" id="AllListingsCardGrid">
+            <h1>All Listings</h1>
+            <div class="CardsContainer">
+                <!--Start of Card 1-->
+                <div class="card">
+                    <img src="assets/images/MondrianPainting.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                    <h5 class="card-title">Mondrian Painting</h5>
+                    <p class="card-text">Recreated a Mondrian Painting using CSS Grid</p>
+                    <a href="./public/MondrianPainting.html" class="btn btn-primary">Link to Project</a>
+                    </div>
+                </div>
+                <!--Start of Card 2-->
+                <div class="card">
+                    <img src="assets/images/CreativeAgency.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                    <h5 class="card-title">Agency Homepage</h5>
+                    <p class="card-text">Created a homepage for a creative agency utilizing responsive design</p>
+                    <a href="./public/CreativeAgency.html" class="btn btn-primary">Link to Project</a>
+                    </div>
+                </div>
+                <!--Start of Card 3-->
+                <div class="card">
+                    <img src="assets/images/MemeProject.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                    <h5 class="card-title">Web Development Meme</h5>
+                    <p class="card-text">Created a meme using Flexbox</p>
+                    <a href="./public/MemeProject.html" class="btn btn-primary">Link to Project</a>
+                    </div>
+                </div>
+                <!--Start of Card 4-->
+                <div class="card">
+                    <img src="assets/images/BirthdayParty.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                    <h5 class="card-title">Birthday Party Invite</h5>
+                    <p class="card-text">Crated a birthday invitation with just HTML</p>
+                    <a href="./public/birthday-invite.html" class="btn btn-primary">Link to Project</a>
+                    </div>
+                </div>
+                <!--Start of Card 5-->
+                <div class="card">
+                    <img src="assets/images/SpanishVocab.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                    <h5 class="card-title">Spanish Vocab</h5>
+                    <p class="card-text">Craeted a quick flash card game for popular Spanish colors</p>
+                    <a href="./public/SpanishVocab.html" class="btn btn-primary">Link to Project</a>
+                    </div>
+                </div>
+                <!--Start of Card 6-->
+                <div class="card">
+                    <img src="assets/images/MondrianPainting.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                    <h5 class="card-title">Mondrian Painting</h5>
+                    <p class="card-text">Recreated a Mondrian Painting using CSS Grid</p>
+                    <a href="./public/MondrianPainting.html" class="btn btn-primary">Link to Project</a>
+                    </div>
+                </div>
+                <!--Start of Card 7-->
+                <div class="card">
+                    <img src="assets/images/CreativeAgency.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                    <h5 class="card-title">Agency Homepage</h5>
+                    <p class="card-text">Created a homepage for a creative agency utilizing responsive design</p>
+                    <a href="./public/CreativeAgency.html" class="btn btn-primary">Link to Project</a>
+                    </div>
+                </div>
+                <!--Start of Card 8-->
+                <div class="card">
+                    <img src="assets/images/MemeProject.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                    <h5 class="card-title">Web Development Meme</h5>
+                    <p class="card-text">Created a meme using Flexbox</p>
+                    <a href="./public/MemeProject.html" class="btn btn-primary">Link to Project</a>
+                    </div>
+                </div>
+                <!--Start of Card 9-->
+                <div class="card">
+                    <img src="assets/images/BirthdayParty.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                    <h5 class="card-title">Birthday Party Invite</h5>
+                    <p class="card-text">Crated a birthday invitation with just HTML</p>
+                    <a href="./public/birthday-invite.html" class="btn btn-primary">Link to Project</a>
+                    </div>
+                </div>
+                <!--Start of Card 10-->
+                <div class="card">
+                    <img src="assets/images/SpanishVocab.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                    <h5 class="card-title">Spanish Vocab</h5>
+                    <p class="card-text">Craeted a quick flash card game for popular Spanish colors</p>
+                    <a href="./public/SpanishVocab.html" class="btn btn-primary">Link to Project</a>
+                    </div>
+                </div>
+                <!--Start of Card 11-->
+                <div class="card">
+                    <img src="assets/images/SpanishVocab.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                    <h5 class="card-title">Spanish Vocab</h5>
+                    <p class="card-text">Craeted a quick flash card game for popular Spanish colors</p>
+                    <a href="./public/SpanishVocab.html" class="btn btn-primary">Link to Project</a>
+                    </div>
+                </div>
+                <!--Start of Card 12-->
+                <div class="card">
+                    <img src="assets/images/SpanishVocab.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                    <h5 class="card-title">Spanish Vocab</h5>
+                    <p class="card-text">Craeted a quick flash card game for popular Spanish colors</p>
+                    <a href="./public/SpanishVocab.html" class="btn btn-primary">Link to Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ViewAllButtonContainer">
+                <div class="ViewAllBTN">
+                    <a href="FeaturedListings.html"><h3>View All Listings</h3></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/BuyaBMW/SearchBarInteractions.js"></script>
 </body>
 </html>
