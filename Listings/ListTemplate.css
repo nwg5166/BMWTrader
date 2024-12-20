@@ -8,7 +8,7 @@
 /* Body and Page Setup */
 body, html {
     font-family: 'Arial', 'Open Sans', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
     display: flex;
@@ -30,7 +30,7 @@ body, html {
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
-    margin: 175px 0 40px auto;
+    margin: 120px auto 30px;
     max-width: 1200px;
     width: 100%;
 }
@@ -79,7 +79,7 @@ body, html {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.36);
     text-align: center;
 }
 
@@ -87,7 +87,7 @@ body, html {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #333;
+    color:#3217c9 ;
 }
 
 .ListingInformation .breadcrumbs {
@@ -96,14 +96,35 @@ body, html {
     margin-bottom: 15px;
 }
 
-.ListingInformation .breadcrumbs a {
+.ListingInformation a {
     text-decoration: none;
     color: #007bff;
     transition: color 0.3s ease;
 }
 
-.ListingInformation .breadcrumbs a:hover {
+.ListingInformation a:hover {
     color: #0056b3;
+}
+
+.breadcrumbs {
+    display: flex;
+    gap: 5px;
+    align-items: left;
+    justify-content: left;
+    margin-top: 80px;
+    margin-left: 40px;
+}
+
+.breadcrumbs a p {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.breadcrumbs a:hover {
+    color: #b33300af;
+    font-size: 1.5rem;
 }
 
 .ListingInformation .Price h2 {
@@ -123,11 +144,40 @@ body, html {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
 }
 
 .ListingInformation .ContactButton button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.ListingInformation-SellerInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.DistanceFromMe {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.Condition {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.Rating {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Features Section */
@@ -135,14 +185,14 @@ body, html {
     background-color: #f9f9f9;
     border-radius: 5px;
     padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.30);
 }
 
 .FeaturesSection h2 {
     font-size: 1.5rem;
-    color: #333;
+    color: #3217c9;
     margin-bottom: 15px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #dddddda4;
     padding-bottom: 5px;
 }
 
@@ -168,22 +218,29 @@ body, html {
     flex-direction: column;
     gap: 10px;
     background-color: rgb(255, 255, 255);
-    height: 225px;
+    height: auto;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    margin: auto;
+    margin-bottom: 30px;
 }
 .DescriptionSection {
     background-color: #f9f9f9;
     border-radius: 5px;
     padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    height: 150px;
-    width: 80%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.30);
+    height: auto;
+    width: 100%;
     margin: 0 auto;
 }
 .DescriptionSection h2 {
     font-size: 1.5rem;
     color: #3217c9;
     margin-bottom: 15px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #dddddda4;
     padding-bottom: 5px;
 }
 
@@ -198,16 +255,20 @@ body, html {
     flex-direction: column;
     gap: 20px;
     background-color: rgb(255, 255, 255);
-    height: 500px;
+    height: auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 30px;
 }
 
 .SellerInfoSection {
     background-color: #f9f9f9;
     border-radius: 5px;
     padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    height: 150px;
-    width: 80%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.30);
+    height: auto;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -215,7 +276,7 @@ body, html {
     font-size: 1.5rem;
     color: #3217c9;
     margin-bottom: 15px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #dddddda4;
     padding-bottom: 5px;
 }
 
@@ -223,4 +284,556 @@ body, html {
     font-size: 1rem;
     color: #000000;
 }
+
+.SellerInfoCard {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.SellerInfoBody {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    .ListingContainer {
+        flex-direction: column;
+        gap: 20px;
+        margin: 100px auto 35px;
+    }
+
+    .ImageCarousel {
+        flex: 100%;
+    }
+
+    .Sidebar {
+        flex: 100%;
+    }
+    
+    .SellerInfoCard {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.SellerImage img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+
+    
+}
+
+/* Contact Seller Form */
+.ContactSeller {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    flex: 1;
+}
+
+.ContactSeller h3 {
+    font-size: 1.2rem;
+    color: #3217c9;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #dddddda4;
+    padding-bottom: 5px;
+}
+
+.ContactSellerForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ContactSellerForm .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ContactSellerForm label {
+    font-size: 1rem;
+    color: #555;
+}
+
+.ContactSellerForm input,
+.ContactSellerForm textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Arial', 'Open Sans', sans-serif;
+}
+
+.ContactSellerForm button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
+}
+
+.ContactSellerForm button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.MapContainer {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* Estimate Payments Section */
+.ListingContentContainer3 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.EstimatePaymentsSection {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.30);
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.EstimatePaymentsSection h2 {
+    font-size: 1.5rem;
+    color: #3217c9;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.EstimatePaymentsBody {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.EstimatePaymentsCalculator {
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #dddddda4;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.EstimatePaymentsForm {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex: 1;
+}
+
+.EstimatePaymentsCalculator .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+
+
+.EstimatePaymentsForm p {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.EstimatePaymentsCalculator label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.EstimatePaymentsCalculator input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.EstimatePaymentsCalculator button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
+}
+
+.EstimatePaymentsCalculator button:hover {
+    background-color: #0056b3;
+}
+
+.EstimatePaymentsResults {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    justify-content: space-evenly;
+}
+
+.ResultContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.ResultContainer p {
+    font-size: 1rem;
+    color: #000000;
+}
+
+
+.EstimatePaymentsResults h3 {
+    font-size: 1.2rem;
+    color: #3217c9;
+    margin-bottom: 10px;
+}
+
+.EstimatePaymentsResults .result-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+    align-items: center;
+}
+
+.EstimatePaymentsResults .result-item span {
+    font-weight: bold;
+}
+
+
+/* Vehicle Price & Accident History Section */
+.ListingContentContainer4 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+.VehicleHistorySection, .PriceHistorySection {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.VehicleHistorySection h2, .PriceHistorySection h2 {
+    font-size: 1.5rem;
+    color: #3217c9;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.VehicleHistoryBody {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.HistoryItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.HistoryItem img {
+    width: 6rem;
+    height: 5rem;
+}
+
+.HistoryItem p {
+    font-size: 1rem;
+    color: rgb(85, 85, 85);
+}
+
+.PriceHistoryGraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+
+#PriceHistoryGraphCanvas {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 250px;
+}
+
+/* Included Features Section */
+
+.ListingContentContainer5 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.IncludedFeaturesSection {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.IncludedFeaturesSection h2 {
+    font-size: 1.5rem;
+    color: #3217c9;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.IncludedFeaturesBody {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.IncludedFeaturesBody ul {
+    padding: 0;
+    display: flex;
+    flex-direction: row;   
+    gap: 25px;
+    height: auto;
+    margin: auto;
+}
+
+.IncludedFeatureItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.IncludedFeatureItem img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.IncludedFeatureItem p {
+    font-size: 1rem;
+    color: rgb(85, 85, 85);
+}
+
+/* Similar Listings Section */
+/* Grid Card Section */
+.ListingContentContainer6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.30)
+}
+
+.ListingContentContainer6 h2 {
+    font-size: 1.5rem;
+    color: #3217c9;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.CardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 16rem));
+    gap: 2rem; /* Adjusted gap to 1rem for consistent spacing */
+    margin-top: 25px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+.card {
+    width: 100%;
+    height: 20rem;
+    border: 2px solid #c1b9b9;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgb(243, 235, 235);
+    margin: 0rem 0 0rem 0;
+}
+
+.card-img-top {
+    height: 150px;
+    width: 100%;
+    object-fit: contain;
+    background-color: black;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.0rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: navy;
+    text-align: center;
+}
+
+.card-text {
+    font-size: .8rem;
+    color: navy;
+    text-align: center;
+}
+
+.btn {
+    background-color: navy;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: .375rem;
+    margin-top: auto;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.ViewAllBTNContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    background-color: rgb(17, 0, 255);
+    height: auto;
+    padding: 20px;
+    margin-bottom: 50px;
+    width: 30rem;
+    margin: auto;
+}
+
+.ViewAllBTN button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
+}
+
+.ViewAllBTN:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 601px) {
+    .CardsContainer {
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 18rem));
+        margin: auto;
+    }
+    .ContentContainer {
+        margin: auto;
+        background-color: aqua;
+    }
+}
+
+
+.Footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff;
+    height: 100px;
+    width: 100%;
+    margin-top: auto;
+
+}
+
+.Footer p, h3, h4 {
+    color: white;
+    font-size: 1rem;
+}
+
+/* End of ListingTemplate.css */
+
 

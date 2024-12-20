@@ -31,7 +31,9 @@
                 </div>
             </nav>
         </div>
-
+        <div class="breadcrumbs">
+            <a href="/Index.html">Home</a> > <a href="/BuyaBMW/BuyaBMW.html">Search</a> > <a href="#">M3</a>  <p>> 2022 BMW M3 Competition</p>
+        </div>
         <div class="ListingContainer">
             <!-- Image Carousel -->
             <div class="ImageCarousel">
@@ -52,11 +54,20 @@
                 <!-- Listing Information -->
                 <div class="ListingInformation">
                     <h1>2022 BMW M3 Competition</h1>
-                    <div class="breadcrumbs">
-                        <a href="/Index.html">Home</a> > <a href="/BuyaBMW/BuyaBMW.html">Search</a> > <a href="#">M3</a> > 2022 BMW M3 Competition
-                    </div>
                     <div class="Price">
                         <h2>$75,000</h2>
+                    </div>
+                    <div class="ListingInformation-SellerInfo">
+                        <div class="Condition">
+                            <p>Used Car -</p>
+                            <p>34,600 miles</p>
+                        </div>
+                        <div class="DistanceFromMe">
+                            <p>Massapequa, NY</p><p>(11 Miles Away)</p>
+                        </div>
+                        <div class="Rating">
+                            <p> AutoCollection.com<p>(4.2 Stars)</p></p>
+                        </div>
                     </div>
                     <div class="ContactButton">
                         <button>Contact Seller</button>
@@ -89,11 +100,282 @@
         <div class="ListingContentContainer2">
             <!-- Seller Information Section -->
             <div class="SellerInfoSection">
-                <h2>Description</h2>
-                <p>This 2022 BMW M3 Competition is in excellent condition. It has been well maintained and has a clean title. The car has a 2.0L Turbo I4 engine and an automatic transmission. The exterior is Alpine White and the interior is Black. The car has 34,600 miles on it and has an AWD drivetrain
-                </p>
+                    <h2>Seller Information</h2>
+                    <div class="SellerInfoCard">
+                        <div class="SellerInfoBody">
+                            <div class="SellerImage">
+                                <img src="/Assets/Pictures/Thecollection.png">
+                            </div>
+                            <div class="SellerInfo">   
+                                <h3>AutoCollection.com</h3>
+                                <p>640 Sunrise Highway</p>
+                                <p>Massapequa, New York 11758</p>
+                                <p>Phone: (555) 555-5555</p>
+                                <p>Email:</p>
+                                <p>4.3 Stars</p>
+                            </div>
+                        </div>
+                        <div class="MapContainer">
+                            <iframe
+                                width="300"
+                                height="300"
+                                style="border:0"
+                                loading="lazy"
+                                allowfullscreen
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://www.google.com/maps/embed/v1/place?q=640+Sunrise+Highway+Massapequa,+NY+11762&key=AIzaSyCpGw9jbjhRvOCRjc-Npaby0abBTO_3crM">
+                            </iframe>
+                        </div>
+                        <div class="ContactSeller">
+                            <h3>Contact Seller</h3>
+                            <form class="ContactSellerForm">
+                                <div class="form-group">
+                                    <label for="ContactName">Name:</label>
+                                    <input type="text" id="ContactName" name="ContactName" placeholder="Enter your name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ContactEmail">Email:</label>
+                                    <input type="email" id="ContactEmail" name="ContactEmail" placeholder="Enter your email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ContactPhone">Phone:</label>
+                                    <input type="tel" id="ContactPhone" name="ContactPhone" placeholder="Enter your phone number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ContactMessage">Message:</label>
+                                    <textarea id="ContactMessage" name="ContactMessage" rows="4" placeholder="Enter your message" required></textarea>
+                                </div>
+                                <button type="submit">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- Estimate Payments Section -->
+        <div class="ListingContentContainer3">
+            <div class="EstimatePaymentsSection">
+                <h2>Estimate Payments</h2>
+                <div class="EstimatePaymentsBody">
+                    <div class="EstimatePaymentsCalculator">
+                        <form class="EstimatePaymentsForm">
+                            <div class="form-group">
+                                <label for="Price"><p>Price:</p></label>
+                                <input type="text" id="Price" name="Price" value="$75,000" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="DownPayment"><p>Down Payment:</p></label>
+                                <input type="number" id="DownPayment" name="DownPayment" placeholder="Enter Down Payment">
+                            </div>
+                            <div class="form-group">
+                                <label for="TradeInValue"><p>Trade-In Value:</p></label>
+                                <input type="number" id="TradeInValue" name="TradeInValue" placeholder="Enter Trade-In Value">
+                            </div>
+                            <div class="form-group">
+                                <label for="InterestRate"><p>Interest Rate (%):</p></label>
+                                <input type="number" step="0.01" id="InterestRate" name="InterestRate" placeholder="Enter Interest Rate">
+                            </div>
+                            <div class="form-group">
+                                <label for="LoanTerm"><p>Loan Term (months):</p></label>
+                                <input type="number" id="LoanTerm" name="LoanTerm" placeholder="Enter Loan Term">
+                            </div>
+                            <button type="button" onclick="calculatePayments()">Calculate</button>
+                        </form>
+                    </div>
+                    <div class="EstimatePaymentsResults">
+                        <h3>Payment Details</h3>
+                        <div class="ResultContainer">
+                            <div class="result-item">
+                                <span><p>Monthly Payment:</p></span>
+                                <span id="MonthlyPayment">$0.00</span>
+                            </div>
+                            <div class="result-item">
+                                <span><p>Total Interest:</p></span>
+                                <span id="TotalInterest">$0.00</span>
+                            </div>
+                            <div class="result-item">
+                                <span><p>Total Payment:</p></span>
+                                <span id="TotalPayment">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Vehicle Price & Accident History -->
+        <div class="ListingContentContainer4">
+            <div class="VehicleHistorySection">
+                <h2>Vehicle History</h2>
+                <div class="VehicleHistoryBody">
+                    <div class="HistoryItem">
+                        <img src="/Assets/Pictures/ListingTemplates/Drivers.png" alt="Owners Icon">
+                        <p><strong>Owners:</strong> 2</p>
+                    </div>
+                    <div class="HistoryItem">
+                        <img src="/Assets/Pictures/ListingTemplates/Accidents.png" alt="Accident Icon">
+                        <p><strong>Accidents:</strong> 1 Reported</p>
+                    </div>
+                    <div class="HistoryItem">
+                        <img src="/Assets/Pictures/ListingTemplates/Salvage.png" alt="Salvage Icon">
+                        <p><strong>Salvage Title:</strong> None</p>
+                    </div>
+                </div>
+            </div>
+            <div class="PriceHistorySection">
+                <h2>Price History</h2>
+                <div class="PriceHistoryGraph">
+                    <!-- Placeholder for Graph -->
+                    <canvas id="PriceHistoryGraphCanvas"></canvas>
+                </div>
+            </div>
+        </div>
+        <!-- Included Features Section -->
+        <div class="ListingContentContainer5">
+            <div class="IncludedFeaturesSection">
+                <h2>Included Features</h2>
+                <div class="IncludedFeaturesBody">
+                    <ul>
+                        <li>2.0L Turbo I4 Engine</li>
+                        <li>Automatic Transmission</li>
+                        <li>AWD Drivetrain</li>
+                        <li>Alpine White Exterior</li>
+                        <li>Black Interior</li>
+                        <li>34,600 Miles</li>
+                        <li>25 City / 33 Highway MPG</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Similar Listings Section -->
+         <div class="ListingContentContainer6">
+                <h2>All Related Listings</h2>
+                <div class="CardsContainer">
+                    <!--Start of Card 1-->
+                    <div class="card">
+                        <img src="assets/images/MondrianPainting.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                        <h5 class="card-title">Mondrian Painting</h5>
+                        <p class="card-text">Recreated a Mondrian Painting using CSS Grid</p>
+                        <a href="./public/MondrianPainting.html" class="btn btn-primary">Link to Project</a>
+                        </div>
+                    </div>
+                    <!--Start of Card 2-->
+                    <div class="card">
+                        <img src="assets/images/CreativeAgency.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                        <h5 class="card-title">Agency Homepage</h5>
+                        <p class="card-text">Created a homepage for a creative agency utilizing responsive design</p>
+                        <a href="./public/CreativeAgency.html" class="btn btn-primary">Link to Project</a>
+                        </div>
+                    </div>
+                    <!--Start of Card 3-->
+                    <div class="card">
+                        <img src="assets/images/MemeProject.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                        <h5 class="card-title">Web Development Meme</h5>
+                        <p class="card-text">Created a meme using Flexbox</p>
+                        <a href="./public/MemeProject.html" class="btn btn-primary">Link to Project</a>
+                        </div>
+                    </div>
+                    <!--Start of Card 4-->
+                    <div class="card">
+                        <img src="assets/images/BirthdayParty.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                        <h5 class="card-title">Birthday Party Invite</h5>
+                        <p class="card-text">Crated a birthday invitation with just HTML</p>
+                        <a href="./public/birthday-invite.html" class="btn btn-primary">Link to Project</a>
+                        </div>
+                    </div>
+                    <!--Start of Card 5-->
+                    <div class="card">
+                        <img src="assets/images/SpanishVocab.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                        <h5 class="card-title">Spanish Vocab</h5>
+                        <p class="card-text">Craeted a quick flash card game for popular Spanish colors</p>
+                        <a href="./public/SpanishVocab.html" class="btn btn-primary">Link to Project</a>
+                        </div>
+                    </div>
+                    <!--Start of Card 6-->
+                    <div class="card">
+                        <img src="assets/images/MondrianPainting.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                        <h5 class="card-title">Mondrian Painting</h5>
+                        <p class="card-text">Recreated a Mondrian Painting using CSS Grid</p>
+                        <a href="./public/MondrianPainting.html" class="btn btn-primary">Link to Project</a>
+                        </div>
+                    </div>
+                    <!--Start of Card 7-->
+                    <div class="card">
+                        <img src="assets/images/CreativeAgency.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                        <h5 class="card-title">Agency Homepage</h5>
+                        <p class="card-text">Created a homepage for a creative agency utilizing responsive design</p>
+                        <a href="./public/CreativeAgency.html" class="btn btn-primary">Link to Project</a>
+                        </div>
+                    </div>
+                    <!--Start of Card 8-->
+                    <div class="card">
+                        <img src="assets/images/MemeProject.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                        <h5 class="card-title">Web Development Meme</h5>
+                        <p class="card-text">Created a meme using Flexbox</p>
+                        <a href="./public/MemeProject.html" class="btn btn-primary">Link to Project</a>
+                        </div>
+                    </div>
+                    <!--Start of Card 9-->
+                    <div class="card">
+                        <img src="assets/images/BirthdayParty.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                        <h5 class="card-title">Birthday Party Invite</h5>
+                        <p class="card-text">Crated a birthday invitation with just HTML</p>
+                        <a href="./public/birthday-invite.html" class="btn btn-primary">Link to Project</a>
+                        </div>
+                    </div>
+                    <!--Start of Card 10-->
+                    <div class="card">
+                        <img src="assets/images/SpanishVocab.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                        <h5 class="card-title">Spanish Vocab</h5>
+                        <p class="card-text">Craeted a quick flash card game for popular Spanish colors</p>
+                        <a href="./public/SpanishVocab.html" class="btn btn-primary">Link to Project</a>
+                        </div>
+                    </div>
+                    <!--Start of Card 11-->
+                    <div class="card">
+                        <img src="assets/images/SpanishVocab.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                        <h5 class="card-title">Spanish Vocab</h5>
+                        <p class="card-text">Craeted a quick flash card game for popular Spanish colors</p>
+                        <a href="./public/SpanishVocab.html" class="btn btn-primary">Link to Project</a>
+                        </div>
+                    </div>
+                    <!--Start of Card 12-->
+                    <div class="card">
+                        <img src="assets/images/SpanishVocab.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                        <h5 class="card-title">Spanish Vocab</h5>
+                        <p class="card-text">Craeted a quick flash card game for popular Spanish colors</p>
+                        <a href="./public/SpanishVocab.html" class="btn btn-primary">Link to Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ViewAllButtonContainer">
+                    <div class="ViewAllBTN">
+                        <button>View All Listings</button>
+                    </div>
+                </div>
+            </div>
+            <footer class="Footer">
+                <div class="FooterContainer">
+                    <div class="FooterLogo">
+                        <a href="/Index.html"><h3>BMWTrader.com</h3></a>
+                        <a href="/ContactUs.html"><h4>Contact Us</h4></a>
+                        <h4>Based out of New York, USA</h4>
+                    </div>
+                </div>
+            </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="ListTemplate.js"></script>
 </body>
 </html>
