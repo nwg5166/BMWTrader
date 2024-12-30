@@ -211,6 +211,7 @@ body, html {
     border: 2px solid #020000;
     display: flex;
     flex-direction: column;
+    border-radius: 15px;
     
     
 }
@@ -220,6 +221,7 @@ body, html {
     width: 16rem;
     object-fit:contain;
     background-color: black;
+    border-radius: 13px 13px 0 0;
 }
 
 .card-body {
@@ -232,6 +234,7 @@ body, html {
     padding: 1rem;
     background-color: #ddd;
     box-sizing: border-box;
+    border-radius: 0 0 15px 15px;
 }
 
 .card-title {
